@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flag Project</title>
+  <style>
+    /* Write your CSS Code here */
+    .flag {
+      width: 900px;
+      height: 600px;
+      background-color: #CE1126;
+      position: relative;
+    }
+
+    p {
+      color: white;
+      font-size: 5rem;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .flag > div {
+      background-color: #002868;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      top: 150px;
+    }
+
+    .flag > div > div {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: white;
+      
+      position: relative;
+
+      /* 
+        Para poder centrar el circulo se tiene que tomar
+        en cuenta su tamaño 200x200 y el lugar donde
+        se encuentra. 
+        
+        - En este caso, al ponerle position:relative es relativo a la posicion del div azul. 
+        
+        Por lo que, la altura y ancho se calculan frente a
+        ese div y al querer centrarse se toman en 
+        cuenta el ancho y largo del circulo divido 2.
+
+        - 200px de ancho, la mitad es 100px por lo que a la mitad del div azul 450px se le restan
+        los 100px calculados anteriormente.
+      */
+      left: 350px;
+      top: 50px;
+      
+    }
+
+    .flag div  div p {
+      color: black;
+    }
+  </style>
+</head>
+
+<!-- 
+  IMPORTANT! 
+  - Do not change any HTML
+  - Don't add any classes/ids/elements 
+  - Use what you know about combining selectors and CSS specificity instead.
+  - Hint 1: The flag is 900px by 600px and the circle is 200px by 200px.
+  - Hint 2: You can use CSS inspection to get the colors from https://appbrewery.github.io/flag-of-laos/
+-->
+
+<body>
+  <div class="flag">
+    <p>The Flag</p>
+    <div>
+      <div>
+        <p>of Laos</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
